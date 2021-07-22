@@ -14,6 +14,8 @@ const deleveryRoutes = require('./routes/delevery');
 const itemRouters = require('./routes/item');
 const bannerRouters = require('./routes/banner');
 const userRouters = require('./routes/user');
+const conversationRouters = require('./routes/conversation');
+const messageRouter = require('./routes/messages');
 
 //Middleware
 app.use(bodyParser.json());
@@ -37,6 +39,8 @@ app.use('/api', deleveryRoutes);
 app.use('/api', itemRouters);
 app.use('/api', bannerRouters);
 app.use('/api', userRouters);
+app.use('/api', conversationRouters);
+app.use('/api', messageRouter);
 
 //Error MiddleWare
 
